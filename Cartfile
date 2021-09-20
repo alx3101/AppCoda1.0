@@ -1,0 +1,3 @@
+github "HeroTransitions/Hero"
+github "xmartlabs/XLActionController" ~> 5.1.0
+github "Alamofire/Alamofire" ~> 5.4
