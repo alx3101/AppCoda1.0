@@ -20,5 +20,145 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D88F53E-881B-4218-B237-659493B47570"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppCoda1.0/Views/ShopCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ShopCollectionViewCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A761D6D-AE61-4051-93D4-E5899E68419E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppCoda1.0/Views/ShopCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ShopCollectionViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2A761D6D-AE61-4051-93D4-E5899E68419E - 571e698c5c94b391"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppCoda1_0.ShopCollectionViewCell.People.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "AppCoda1.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpopa/Desktop/AppCoda1.0/AppCoda1.0/Views/ShopCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "2A761D6D-AE61-4051-93D4-E5899E68419E - 6aa8fd5db8fc579d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppCoda1_0.ShopCollectionViewCell.People.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "AppCoda1.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpopa/Desktop/AppCoda1.0/AppCoda1.0/Views/ShopCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "2A761D6D-AE61-4051-93D4-E5899E68419E - 7cbdd2fe87ba6ed8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppCoda1_0.ShopCollectionViewCell.People.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "AppCoda1.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpopa/Desktop/AppCoda1.0/AppCoda1.0/Views/ShopCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "2A761D6D-AE61-4051-93D4-E5899E68419E - 38d77fc344858f2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppCoda1_0.ShopCollectionViewCell.People.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "AppCoda1.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpopa/Desktop/AppCoda1.0/AppCoda1.0/Views/ShopCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "2A761D6D-AE61-4051-93D4-E5899E68419E - e2754c29d1e263e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppCoda1_0.ShopCollectionViewCell.init(frame: __C.CGRect) -&gt; AppCoda1_0.ShopCollectionViewCell"
+                  moduleName = "AppCoda1.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpopa/Desktop/AppCoda1.0/AppCoda1.0/Views/ShopCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "2A761D6D-AE61-4051-93D4-E5899E68419E - 82c2ab8860aa717"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppCoda1_0.ShopCollectionViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;AppCoda1_0.ShopCollectionViewCell&gt;"
+                  moduleName = "AppCoda1.0"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexpopa/Desktop/AppCoda1.0/AppCoda1.0/Views/ShopCollectionViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "124">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC8EB9C8-2B87-42FB-BB42-5B114C7F51A5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppCoda1.0/UI/Settings/Swift/AccountSettings.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

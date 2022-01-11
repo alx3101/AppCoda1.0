@@ -1,1 +1,4 @@
+github "Alamofire/Alamofire" "5.5.0"
 github "HeroTransitions/Hero" "1.6.1"
+github "khawajafarooq/ProgressMeter" "0.1.6"
+github "xmartlabs/XLActionController" "5.1.0"

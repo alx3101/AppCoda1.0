@@ -6,33 +6,50 @@
 //
 
 import UIKit
+import CoreData
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseDatabase
+
+
 
 
 
 class ShopCollectionViewController: UICollectionViewController {
 
-    
+    var ref : DatabaseReference?
     var ShopsSwift = [ShopStructure]()
-  
-    @IBOutlet weak var Delete: UIBarButtonItem!
+    var Distance : String!
+    var Logo : UIImage!
+    var pp : String!
+    var loc : String!
+    var CurrentShop : ShopStructure?
+    
+   
     @IBOutlet weak var ShopCollectionView: UICollectionView!
     let ShopCollectionViewCellId = "ShopCollectionViewCell"
+    
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
        
-
+        navigationItem.leftBarButtonItem = editButtonItem
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ShopCollectionViewCell")
+        
 
         // Do any additional setup after loading the view.
         
         ShopCollectionView.layer.cornerRadius = 10
         ShopCollectionView.layer.masksToBounds = true
+        
+
         
         
         // register cell
@@ -41,29 +58,62 @@ class ShopCollectionViewController: UICollectionViewController {
         ShopCollectionView.delegate = self
         ShopCollectionView.dataSource = self
         
+        
         // init data
-        for _ in 1...25 {
+        for _ in 1...11 {
             let Shop = ShopStructure()
-            Shop?.pp = "6"
-            Shop?.loc = "G.marconi 65"
+            Shop?.pp = "4"
+            /* Shop?.loc = "G.marconi 65" */
+            Shop?.Distance = "Actual Pozition"
+            Shop?.Logo =  #imageLiteral(resourceName: "logo_small")
+            Shop?.loc = " Via G.marconi 65"
+            
+            
             ShopsSwift.append(Shop!)
         }
         ShopCollectionView.reloadData()
+        
+        for _ in 11...20 {
+            let Shop = ShopStructure()
+            Shop?.pp = "20"
+            /* Shop?.loc = "Unieuro" */
+            Shop?.Distance = "12 Km"
+            Shop?.Logo = #imageLiteral(resourceName: "1200px-Unieuro_Logo_2015-3.png")
+            Shop?.loc = " Via Le Centurie"
+            ShopsSwift.append(Shop!)
+        }
+        ShopCollectionView.reloadData()
+        
+        for _ in 20...25 {
+            let Shop = ShopStructure()
+            Shop?.pp = "100"
+            /* Shop?.loc = "Nave de vero" */
+            Shop?.Distance = "49 Km"
+            Shop?.Logo = #imageLiteral(resourceName: "Nave de Veri.png")
+            Shop?.loc = "Via Pietro Arduino, 20, 30175 Venezia VE"
+            ShopsSwift.append(Shop!)
+        }
+        ShopCollectionView.reloadData()
+        
+        
+        
+        let center = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+        }
+        
     }
+    override func setEditing(_ editing: Bool, animated: Bool) {
+           super.setEditing(editing, animated: animated)
+           
+           collectionView.allowsMultipleSelection = editing
+           let indexPaths = collectionView.indexPathsForVisibleItems
+           for indexPath in indexPaths {
+               let ShopCollectionViewCell = collectionView.cellForItem(at: indexPath) as! ShopCollectionViewCell
+               ShopCollectionViewCell.isInEditingMode = editing
+           }
+       }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -91,46 +141,44 @@ class ShopCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShopCollectionViewCellId, for: indexPath) as! ShopCollectionViewCell
         let Shop = ShopsSwift[indexPath.row]
        
-        cell.People.text = Shop.pp!
+         cell.People.text = Shop.pp!
+      
+        /* cell.Location.text = Shop.loc! */
+        cell.Distance.text = Shop.Distance!
+        cell.Logo.image = Shop.Logo!
         cell.Location.text = Shop.loc!
         
-        cell.addButtonTapAction = {
-                   // implement your logic here, e.g. call preformSegue()
-                   self.performSegue(withIdentifier: "DP", sender: self)
-        }
-        
+        cell.isInEditingMode = isEditing
             return cell
     }
 
     // MARK: UICollectionViewDelegate
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
+        // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            CurrentShop = ShopsSwift[indexPath.row]
+            performSegue(withIdentifier: "DP", sender: ShopCollectionView)
+        
     }
-    */
 
-}
+        // In a storyboard-based application, you will often want to do a little preparation before navigation
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if let viewController = segue.destination as? DetailPage{
+                viewController.Shop = CurrentShop
+            }
+        }
+    
+   
+    }
+
+
+

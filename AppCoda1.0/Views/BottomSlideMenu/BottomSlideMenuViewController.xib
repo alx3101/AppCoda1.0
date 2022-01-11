@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomSlideMenuViewController" customModule="AppCoda1_0" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="aj2-Tv-efi"/>
+                <outlet property="mobileView" destination="sqo-EF-9Sd" id="mwS-3R-Q0z"/>
+                <outlet property="touchArea" destination="2Bd-ic-TVN" id="3pK-f2-1lM"/>
+                <outlet property="view" destination="iN0-l3-epB" id="u30-IM-pUV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bd-ic-TVN" userLabel="Touch Area">
+                    <rect key="frame" x="0.0" y="433" width="414" height="30"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Xg-AV-efY">
+                            <rect key="frame" x="169.5" y="8" width="75" height="5"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="5" id="6J8-pv-3YJ"/>
+                                <constraint firstAttribute="width" constant="75" id="NQT-oP-WoA"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1R2-z8-Omi"/>
+                        <constraint firstItem="0Xg-AV-efY" firstAttribute="centerX" secondItem="2Bd-ic-TVN" secondAttribute="centerX" id="QPU-u7-wtT"/>
+                        <constraint firstItem="0Xg-AV-efY" firstAttribute="top" secondItem="2Bd-ic-TVN" secondAttribute="top" constant="8" id="ytZ-ra-2Hn"/>
+                    </constraints>
+                </view>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqo-EF-9Sd">
+                    <rect key="frame" x="0.0" y="450" width="414" height="950"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="950" id="N7N-gK-XfC"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="sqo-EF-9Sd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="450" id="GOQ-9r-rEt"/>
+                <constraint firstItem="sqo-EF-9Sd" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="KXS-t5-Vbw"/>
+                <constraint firstItem="sqo-EF-9Sd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kY5-Se-t8Q"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
+        </view>
+    </objects>
+</document>

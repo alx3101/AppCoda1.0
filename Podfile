@@ -10,12 +10,15 @@ target 'AppCoda1.0' do
     pod 'Firebase/Auth'
     pod 'Firebase/Firestore'
     pod 'Firebase/Storage'
+    pod 'Firebase/Database'
     pod 'GooglePlaces'
     pod 'Hero'
     pod 'GoogleMaps'
     pod 'XLActionController'
     pod 'Alamofire', '~> 5.4'
     pod 'SwiftyJSON'
+    pod 'ProgressMeter'
+    pod 'GoogleSignIn'
 
 
 end
